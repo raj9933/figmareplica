@@ -1,0 +1,59 @@
+.nav-links {
+  display: flex;
+  gap: 20px;
+  position: relative; 
+}
+
+
+.nav-item {
+  position: static;
+}
+
+.nav-item a {
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0; 
+  display: none;
+  background: rgb(248, 245, 245);
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100vw; 
+  z-index: 999;
+}
+
+
+
+.nav-item:hover .dropdown {
+  display: flex;
+}
+
+.dropdown a {
+  color: black;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.nav-item:hover .arrow::before {
+  content: "▴";
+}
+
+.arrow::before {
+  content: "▾";
+}
+
+p{
+    color: gray;
+}
+
+
+.dropdown a:hover img {
+    transform: translateY(-10%) rotate(-2deg) scale(1.1);
+    transition: all 0.3s ease;
+  }
